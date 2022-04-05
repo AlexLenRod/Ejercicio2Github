@@ -17,8 +17,8 @@ public class operaciones {
 
 	public static void main(String[] args) {
 		// Declaracion de variables
-		 int opc;
-	     double num1, num2, result=0;
+		 int opcion;
+	     double numero1, numero2, resultado=0;
 
 	     /* Aqui se despliega un menu donde se le pide al usuario que haga una eleccion entre tres 
 	      * operaciones
@@ -32,62 +32,62 @@ public class operaciones {
 
 
 	     System.out.print("ingrese numero de operacion quieres realizar : ");      
-	     opc = entrada.nextInt();
+	     opcion = entrada.nextInt();
 	     System.out.print("\n");
 	       
 	     /**
 	      * Comprobacion de que el numero ingresado por el usuario si se encuentre entre el rango 
 	      * establecido
 	      */
-	     if (opc >=1 && opc <=3)
+	     if (opcion >=1 && opcion <=3)
 	     {
 	    	/**
 	    	 * Se pide al usuario que ingrese dos numeros que seran los operandos de la operacion
 	    	 * que el metodo correspondiente recibira como parametros
 	    	 */
 	        System.out.print("ingrese primer numero : ");
-	        num1 = entrada.nextDouble();
+	        numero1 = entrada.nextDouble();
 	        System.out.print("ingrese segundo numero : ");
-	        num2 = entrada.nextDouble();
+	        numero2 = entrada.nextDouble();
 	          
 	        /**
 	         * Si el usuario elige la opcion 1, se realiza una suma
 	         */
-	        if (opc==1)
+	        if (opcion==1)
 	        {
 
 	           System.out.println("Usted a elegido sumar los dos numeros");
-	           suma(num1, num2);
+	           suma(numero1, numero2);
 	           //Se llama al metodo suma pasandole los dos numeros ingresados como parametros
-	           result = suma(num1, num2);
+	           resultado = suma(numero1, numero2);
 	        }
 	          
 	        /**
 	         * Si el usuario elige la opcion , se realiza una resta
 	         */
-	        if (opc==2)
+	        if (opcion==2)
 	        {
 
 	           System.out.println("Usted a elegido restar los dos numeros");
 	           //Se llama al metodo resta pasandole los dos numeros ingresados como parametros
-	           resta(num1, num2);
-	           result = resta(num1, num2);
+	           resta(numero1, numero2);
+	           resultado = resta(numero1, numero2);
 	        }
 	          
 	        /**
 	         * Si el usuario elige la opcion 3, se realiza una multiplicacion
 	         */
-	        if (opc==3)
+	        if (opcion==3)
 	        {
 
 	           System.out.println("Usted a elegido multiplicar los dos numeros");
 	           //Se llama al metodo multip pasandole los dos numeros ingresados como parametros
-	           multip(num1, num2); 
-	           result = multip(num1, num2);
+	           multip(numero1, numero2); 
+	           resultado = multip(numero1, numero2);
 	        }
 	        
 	        //Se imprime por consola un texto mas el resultado de la operacion realizada
-	        System.out.print("El resultado de la operacion es : "+result);
+	        System.out.print("El resultado de la operacion es : "+resultado);
 	        System.out.print("\n");
 	     }
 	     
@@ -96,7 +96,7 @@ public class operaciones {
 	    	 * Si el usuario no ha ingresado uno de los numeros que se corresponde con una de 
 	    	 * las operaciones, se mostrara un mensaje en consola indicando el error
 	    	 */
-	        System.out.println("el numero "+opc+ " no corresponde a ninguna operacion");
+	        System.out.println("el numero "+opcion+ " no corresponde a ninguna operacion");
 	        System.out.print("\n");
 	}
 
